@@ -28,6 +28,8 @@ import About from './pages/About';
 
 import Contact from './pages/Contact';
 
+import Discover from './pages/Discover';
+
 import NotFound from './pages/NotFound';
 
 
@@ -38,102 +40,71 @@ import PrivateRoute from './routes/PrivateRoute';
 
 
 
-function App() {
-
+function AppLayout({ children }) {
   return (
-
     <div className="min-h-screen flex flex-col bg-gray-50">
-
       <Header />
-
-      <main className="flex-grow">
-
-        <Routes>
-
-          {/* Public Routes */}
-
-          <Route path="/" element={<Home />} />
-
-          <Route path="/destinations" element={<Destinations />} />
-
-          <Route path="/destinations/:id" element={<DestinationDetail />} />
-
-          <Route path="/about" element={<About />} />
-
-          <Route path="/contact" element={<Contact />} />
-
-          <Route path="/login" element={<Login />} />
-
-          <Route path="/signup" element={<Signup />} />
-
-          
-
-          {/* Private Routes */}
-
-          <Route
-
-            path="/booking/:id"
-
-            element={
-
-              <PrivateRoute>
-
-                <Booking />
-
-              </PrivateRoute>
-
-            }
-
-          />
-
-          <Route
-
-            path="/booking-confirmation"
-
-            element={
-
-              <PrivateRoute>
-
-                <BookingConfirmation />
-
-              </PrivateRoute>
-
-            }
-
-          />
-
-          <Route
-
-            path="/profile"
-
-            element={
-
-              <PrivateRoute>
-
-                <Profile />
-
-              </PrivateRoute>
-
-            }
-
-          />
-
-          
-
-          {/* 404 Route */}
-
-          <Route path="*" element={<NotFound />} />
-
-        </Routes>
-
-      </main>
-
+      <main className="flex-grow">{children}</main>
       <Footer />
-
     </div>
-
   );
+}
 
+function App() {
+  return (
+    <Routes>
+      {/* Discover page has its own layout with header and sidebar */}
+      <Route path="/discover" element={<Discover />} />
+
+      {/* Other pages use standard layout */}
+      <Route
+        path="/*"
+        element={
+          <AppLayout>
+            <Routes>
+              {/* Public Routes */}
+              <Route path="/" element={<Home />} />
+              <Route path="/destinations" element={<Destinations />} />
+              <Route path="/destinations/:id" element={<DestinationDetail />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+
+              {/* Private Routes */}
+              <Route
+                path="/booking/:id"
+                element={
+                  <PrivateRoute>
+                    <Booking />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/booking-confirmation"
+                element={
+                  <PrivateRoute>
+                    <BookingConfirmation />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/profile"
+                element={
+                  <PrivateRoute>
+                    <Profile />
+                  </PrivateRoute>
+                }
+              />
+
+              {/* 404 Route */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </AppLayout>
+        }
+      />
+    </Routes>
+  );
 }
 
 

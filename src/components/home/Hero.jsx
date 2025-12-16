@@ -60,7 +60,7 @@ const Hero = () => {
           </form>
 
           {/* Call-to-Action Button */}
-          <Link to="/destinations">
+          <Link to="/discover">
             <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-colors duration-200 shadow-lg text-lg">
               Discover Destinations
             </button>

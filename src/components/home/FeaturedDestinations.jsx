@@ -17,31 +17,7 @@ const FeaturedDestinations = () => {
         const mockData = [
           {
             id: 1,
-            name: 'Bali Paradise',
-            location: 'Indonesia',
-            image: '/images/destinations/bali.jpg',
-            rating: 4.8,
-            reviews: 1250,
-            price: 1200,
-            duration: '7 days',
-            description: 'Tropical beaches, ancient temples, and vibrant culture await in this Indonesian paradise.',
-            category: 'Beach'
-          },
-          {
-            id: 2,
-            name: 'Swiss Alps Adventure',
-            location: 'Switzerland',
-            image: '/images/destinations/swiss-alps.jpg',
-            rating: 4.9,
-            reviews: 890,
-            price: 1800,
-            duration: '5 days',
-            description: 'Experience breathtaking mountain views, charming villages, and world-class skiing.',
-            category: 'Mountain'
-          },
-          {
-            id: 3,
-            name: 'Tokyo Explorer',
+            name: 'Tokyo',
             location: 'Japan',
             image: '/images/destinations/tokyo.jpg',
             rating: 4.7,
@@ -52,16 +28,52 @@ const FeaturedDestinations = () => {
             category: 'City'
           },
           {
-            id: 4,
-            name: 'Santorini Sunset',
-            location: 'Greece',
-            image: '/images/destinations/santorini.jpg',
+            id: 2,
+            name: 'Bali',
+            location: 'Indonesia',
+            image: '/images/destinations/bali.jpg',
+            rating: 4.8,
+            reviews: 1250,
+            price: 1200,
+            duration: '7 days',
+            description: 'Tropical beaches, ancient temples, and vibrant culture await in this Indonesian paradise.',
+            category: 'Beach'
+          },
+          {
+            id: 3,
+            name: 'Maldives',
+            location: 'Maldives',
+            image: '/images/destinations/maldives.jpg',
             rating: 4.9,
             reviews: 980,
-            price: 1350,
-            duration: '4 days',
-            description: 'White-washed buildings, stunning sunsets, and crystal-clear waters in the Greek islands.',
+            price: 2200,
+            duration: '5 days',
+            description: 'Crystal clear waters, overwater bungalows, and pristine beaches make this a dream destination.',
             category: 'Beach'
+          },
+          {
+            id: 4,
+            name: 'Kuala Lumpur',
+            location: 'Malaysia',
+            image: '/images/destinations/kuala-lumpur.jpg',
+            rating: 4.6,
+            reviews: 850,
+            price: 1100,
+            duration: '4 days',
+            description: 'A perfect blend of modern architecture and rich culture with an incredible food scene.',
+            category: 'City'
+          },
+          {
+            id: 5,
+            name: 'Hanoi',
+            location: 'Vietnam',
+            image: '/images/destinations/hanoi.jpg',
+            rating: 4.7,
+            reviews: 720,
+            price: 900,
+            duration: '5 days',
+            description: 'Historic old quarter, delicious street food, and authentic Vietnamese culture await.',
+            category: 'Cultural'
           }
         ];
 
@@ -175,7 +187,7 @@ const FeaturedDestinations = () => {
                     </span>
                     <span className="text-gray-600 text-sm"> / person</span>
                   </div>
-                  <Link to={`/destinations/${destination.id}`}>
+                  <Link to={`/discover?search=${encodeURIComponent(destination.name)}`}>
                     <Button size="sm">
                       View Details
                     </Button>
@@ -188,7 +200,7 @@ const FeaturedDestinations = () => {
 
         {/* View All Button */}
         <div className="text-center">
-          <Link to="/destinations">
+          <Link to="/discover">
             <Button size="lg">
               View All Destinations
             </Button>
