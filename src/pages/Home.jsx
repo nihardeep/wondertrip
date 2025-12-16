@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { Search, MapPin, Star, Users, Award, Globe } from 'lucide-react';
 import Hero from '../components/home/Hero';
 import FeaturedDestinations from '../components/home/FeaturedDestinations';
-import SearchForm from '../components/common/SearchForm';
 import Button from '../components/common/Button';
 import Card from '../components/common/Card';
 import CardContent from '../components/common/CardContent';
@@ -37,21 +36,6 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <Hero />
-
-      {/* Search Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-display font-bold mb-4">
-              Find Your Perfect Destination
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Search thousands of amazing destinations worldwide
-            </p>
-            <SearchForm />
-          </div>
-        </div>
-      </section>
 
       {/* Stats Section */}
       <section className="py-16 bg-white">
