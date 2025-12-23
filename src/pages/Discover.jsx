@@ -376,7 +376,7 @@ const Discover = () => {
         </main>
 
         {/* Right Sidebar */}
-        <aside className="w-80 bg-white border-l border-gray-200 p-6 sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto">
+        <aside className="w-80 bg-white border-l border-gray-200 p-6 sticky top-16 h-screen overflow-y-auto">
           {/* Trending Creators */}
           <div className="mb-8">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Trending Creators</h3>
