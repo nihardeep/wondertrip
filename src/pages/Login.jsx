@@ -85,18 +85,18 @@ const Login = () => {
       console.log('Resolved Status:', status);
 
       // Temporary debugging alerts to help user see what's happening
-      // alert(`Debug: Status is ${status}`);
+      alert(`Debug: Status is ${status}`);
 
       if (status && status.toLowerCase() === 'success') {
         console.log('Login successful. Starting session and navigating...');
         // Start session
         loginSuccess({ email: formData.email, name: 'User' }); // Minimal user object
-        // alert('Login Success! Redirecting to Discover...'); // Visual confirmation
+        alert('Login Success! Redirecting to Discover...'); // Visual confirmation
         navigate('/discover');
         return;
       } else {
         console.log('Login failed with status:', status);
-        // alert(`Login Failed. Status: ${status}, Message: ${message}`);
+        alert(`Login Failed. Status: ${status}, Message: ${message}`);
         setErrors({ general: 'Invalid email or password.' });
       }
     } catch (error) {
