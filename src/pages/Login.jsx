@@ -57,7 +57,12 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!validateForm()) return;
+    console.log('Login form submitted'); // Debug log
+    if (!validateForm()) {
+      console.log('Validation failed', errors); // Debug log
+      return;
+    }
+    console.log('Validation passed, sending data...'); // Debug log
 
     const loginData = {
       email: formData.email,
