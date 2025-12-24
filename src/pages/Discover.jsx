@@ -160,9 +160,9 @@ const Discover = () => {
 
   // Filter posts based on selected destination
   const filteredPosts = selectedDestination
-    ? creatorPosts.filter(post => 
-        post.location.toLowerCase().includes(selectedDestination.toLowerCase())
-      )
+    ? creatorPosts.filter(post =>
+      post.location.toLowerCase().includes(selectedDestination.toLowerCase())
+    )
     : creatorPosts;
 
   const trendingCreators = [
@@ -236,11 +236,10 @@ const Discover = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`flex items-center space-x-3 px-4 py-3 rounded-lg mb-1 transition-colors ${
-                  item.active
+                className={`flex items-center space-x-3 px-4 py-3 rounded-lg mb-1 transition-colors ${item.active
                     ? 'bg-purple-50 text-purple-700'
                     : 'text-gray-700 hover:bg-gray-50'
-                }`}
+                  }`}
               >
                 <item.icon className={`w-5 h-5 ${item.active ? 'text-purple-600' : ''}`} />
                 <span className="font-medium">{item.label}</span>
@@ -290,16 +289,16 @@ const Discover = () => {
                             post.creator.name === 'John Doe'
                               ? 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces'
                               : post.creator.name === 'Sophia Travels'
-                              ? 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces'
-                              : post.creator.name === 'Alice Travel'
-                              ? 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=faces'
-                              : post.creator.name === 'Wanderlust Ben'
-                              ? 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces'
-                              : post.creator.name === 'Journey Jules'
-                              ? 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces'
-                              : post.creator.name === 'Tokyo Explorer'
-                              ? 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=faces'
-                              : 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&h=100&fit=crop&crop=faces'
+                                ? 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces'
+                                : post.creator.name === 'Alice Travel'
+                                  ? 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=faces'
+                                  : post.creator.name === 'Wanderlust Ben'
+                                    ? 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces'
+                                    : post.creator.name === 'Journey Jules'
+                                      ? 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces'
+                                      : post.creator.name === 'Tokyo Explorer'
+                                        ? 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=faces'
+                                        : 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&h=100&fit=crop&crop=faces'
                           }
                           alt={post.creator.name}
                           className="w-10 h-10 rounded-full object-cover"
@@ -318,17 +317,17 @@ const Discover = () => {
                     <div className="w-full h-64 rounded-lg mb-4 overflow-hidden">
                       <img
                         src={
-                          post.location.includes('Tokyo') 
+                          post.location.includes('Tokyo')
                             ? 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80'
                             : post.location.includes('Bali')
-                            ? 'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&q=80'
-                            : post.location.includes('Maldives')
-                            ? 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'
-                            : post.location.includes('Kuala Lumpur')
-                            ? 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80'
-                            : post.location.includes('Hanoi')
-                            ? 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80'
-                            : 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80'
+                              ? 'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&q=80'
+                              : post.location.includes('Maldives')
+                                ? 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'
+                                : post.location.includes('Kuala Lumpur')
+                                  ? 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80'
+                                  : post.location.includes('Hanoi')
+                                    ? 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80'
+                                    : 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80'
                         }
                         alt={post.location}
                         className="w-full h-full object-cover"
@@ -388,8 +387,8 @@ const Discover = () => {
                       creator.name === 'Alice Travel'
                         ? 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=faces'
                         : creator.name === 'Wanderlust Ben'
-                        ? 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces'
-                        : 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces'
+                          ? 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces'
+                          : 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces'
                     }
                     alt={creator.name}
                     className="w-10 h-10 rounded-full object-cover"
@@ -418,9 +417,9 @@ const Discover = () => {
           </div>
 
           {/* AI Trip Generation CTA */}
-          <Card className="border-0 shadow-lg rounded-2xl bg-[#5b61ff]">
-            <CardContent className="p-6 text-white">
-              <h3 className="text-lg font-semibold mb-3">Turn Any Video Into a Trip</h3>
+          <Card className="border-0 shadow-lg rounded-2xl !bg-[#5b61ff] overflow-hidden">
+            <CardContent className="p-6 text-white relative z-10">
+              <h3 className="text-lg font-semibold mb-3 text-white">Turn Any Video Into a Trip</h3>
               <p className="text-sm mb-5 leading-relaxed text-white/90">
                 Let WonderFlow&apos;s AI craft your next adventure from your content. Share your
                 experiences, generate detailed itineraries, and inspire others.
@@ -461,11 +460,10 @@ const Discover = () => {
                   <button
                     type="button"
                     onClick={() => setTripType('video')}
-                    className={`p-4 border-2 rounded-lg transition-all ${
-                      tripType === 'video'
+                    className={`p-4 border-2 rounded-lg transition-all ${tripType === 'video'
                         ? 'border-purple-600 bg-purple-50'
                         : 'border-gray-200 hover:border-gray-300'
-                    }`}
+                      }`}
                   >
                     <Video className={`w-6 h-6 mx-auto mb-2 ${tripType === 'video' ? 'text-purple-600' : 'text-gray-400'}`} />
                     <span className={`font-medium ${tripType === 'video' ? 'text-purple-600' : 'text-gray-700'}`}>
@@ -475,11 +473,10 @@ const Discover = () => {
                   <button
                     type="button"
                     onClick={() => setTripType('photos')}
-                    className={`p-4 border-2 rounded-lg transition-all ${
-                      tripType === 'photos'
+                    className={`p-4 border-2 rounded-lg transition-all ${tripType === 'photos'
                         ? 'border-purple-600 bg-purple-50'
                         : 'border-gray-200 hover:border-gray-300'
-                    }`}
+                      }`}
                   >
                     <ImageIcon className={`w-6 h-6 mx-auto mb-2 ${tripType === 'photos' ? 'text-purple-600' : 'text-gray-400'}`} />
                     <span className={`font-medium ${tripType === 'photos' ? 'text-purple-600' : 'text-gray-700'}`}>
