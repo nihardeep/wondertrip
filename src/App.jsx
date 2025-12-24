@@ -18,7 +18,9 @@ import Booking from './pages/Booking';
 
 import BookingConfirmation from './pages/BookingConfirmation';
 
-import Profile from './pages/Profile';
+import UserProfile from './pages/UserProfile';
+
+import Settings from './pages/Settings';
 
 import Login from './pages/Login';
 
@@ -95,7 +97,15 @@ function App() {
                 path="/profile"
                 element={
                   <PrivateRoute>
-                    <Profile />
+                    <UserProfile />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/settings"
+                element={
+                  <PrivateRoute>
+                    <Settings />
                   </PrivateRoute>
                 }
               />
