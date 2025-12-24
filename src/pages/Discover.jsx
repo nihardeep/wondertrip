@@ -7,6 +7,7 @@ import Card from '../components/common/Card';
 import CardContent from '../components/common/CardContent';
 import Input from '../components/common/Input';
 import AuthModal from '../components/common/AuthModal';
+import TripSuccessModal from '../components/common/TripSuccessModal';
 
 const Discover = () => {
   const [searchParams] = useSearchParams();
@@ -14,6 +15,7 @@ const Discover = () => {
   const [selectedDestination, setSelectedDestination] = useState(searchQuery || '');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [tripType, setTripType] = useState('video'); // 'video' or 'photos'
   const [formData, setFormData] = useState({
     videoUrl: '',
