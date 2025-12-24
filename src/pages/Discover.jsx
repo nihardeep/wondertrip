@@ -697,6 +697,12 @@ const Discover = () => {
         onClose={() => setShowAuthModal(false)}
       />
 
+      {/* Trip Success Modal */}
+      <TripSuccessModal
+        isOpen={showSuccessModal}
+        onClose={() => setShowSuccessModal(false)}
+      />
+
     </div>
   );
 };
