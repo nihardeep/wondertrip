@@ -5,6 +5,7 @@ import FeaturedDestinations from '../components/home/FeaturedDestinations';
 import Button from '../components/common/Button';
 import Card from '../components/common/Card';
 import CardContent from '../components/common/CardContent';
+import ChatBot from '../components/common/ChatBot';
 
 const Home = () => {
   const stats = [
@@ -110,6 +111,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <ChatBot />
     </div>
   );
 };
