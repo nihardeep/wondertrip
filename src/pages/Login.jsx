@@ -84,9 +84,6 @@ const Login = () => {
       console.log('Webhook Data:', data);
       console.log('Resolved Status:', status);
 
-      // Temporary debugging alerts to help user see what's happening
-      // alert(`Debug: Status is "${status}" (Length: ${status ? status.length : 0})`);
-
       if (status && status.toString().trim().toLowerCase() === 'success') {
         console.log('Login successful. Starting session and navigating...');
         // Start session
