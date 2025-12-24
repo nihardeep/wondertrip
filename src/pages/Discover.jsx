@@ -8,6 +8,7 @@ import CardContent from '../components/common/CardContent';
 import Input from '../components/common/Input';
 import AuthModal from '../components/common/AuthModal';
 import TripSuccessModal from '../components/common/TripSuccessModal';
+import ChatBot from '../components/common/ChatBot';
 
 const Discover = () => {
   const [searchParams] = useSearchParams();
@@ -720,6 +721,7 @@ const Discover = () => {
         onClose={() => setShowSuccessModal(false)}
       />
 
+      <ChatBot />
     </div>
   );
 };
