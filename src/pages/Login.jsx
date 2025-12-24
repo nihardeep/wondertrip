@@ -81,12 +81,17 @@ const Login = () => {
       const status = responseItem.status || responseItem.json?.status;
       const message = responseItem.message || responseItem.json?.message;
 
+      console.log('Webhook Data:', data);
+      console.log('Resolved Status:', status);
+
       if (status === 'success') {
+        console.log('Login successful. Starting session and navigating...');
         // Start session
         loginSuccess({ email: formData.email, name: 'User' }); // Minimal user object
         navigate('/discover');
         return;
       } else {
+        console.log('Login failed with status:', status);
         setErrors({ general: 'Invalid email or password.' });
       }
     } catch (error) {
