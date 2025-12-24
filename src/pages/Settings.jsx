@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { User, Settings, CreditCard, Heart, MapPin, Calendar, Star } from 'lucide-react';
+import { User, Settings as SettingsIcon, CreditCard, Heart, MapPin, Calendar, Star } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 import Button from '../components/common/Button';
 import Input from '../components/common/Input';
@@ -24,7 +24,7 @@ const Settings = () => {
     { id: 'overview', label: 'Overview', icon: User },
     { id: 'bookings', label: 'My Bookings', icon: Calendar },
     { id: 'favorites', label: 'Favorites', icon: Heart },
-    { id: 'settings', label: 'Settings', icon: Settings },
+    { id: 'settings', label: 'Settings', icon: SettingsIcon },
   ];
 
   const mockBookings = [
