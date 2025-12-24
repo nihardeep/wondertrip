@@ -22,7 +22,8 @@ const Discover = () => {
     videoFile: null,
     photos: [],
     destination: '',
-    tripType: 'adventure'
+    tripType: 'adventure',
+    tripDescription: ''
   });
 
   const { user } = useAuth();
@@ -67,6 +68,7 @@ const Discover = () => {
     formDataToSend.append('email', user?.email || '');
     formDataToSend.append('tripType', formData.tripType);
     formDataToSend.append('destination', formData.destination);
+    formDataToSend.append('tripDescription', formData.tripDescription);
 
     // Optional video
     if (formData.videoFile) {
@@ -97,7 +99,8 @@ const Discover = () => {
           videoFile: null,
           photos: [],
           destination: '',
-          tripType: 'adventure'
+          tripType: 'adventure',
+          tripDescription: ''
         });
       } else {
         alert('Failed to start trip generation. Please try again.');
@@ -634,6 +637,19 @@ const Discover = () => {
                   )}
                 </div>
               )}
+
+              {/* Trip Description */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Describe your Trip in few words
+                </label>
+                <textarea
+                  placeholder="e.g. A relaxing beach vacation with some hiking..."
+                  value={formData.tripDescription}
+                  onChange={(e) => setFormData(prev => ({ ...prev, tripDescription: e.target.value }))}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all duration-200 outline-none min-h-[100px]"
+                />
+              </div>
 
               {/* Trip Destination */}
               <div>
