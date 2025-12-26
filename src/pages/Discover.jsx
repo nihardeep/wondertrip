@@ -83,8 +83,19 @@ const Discover = () => {
       });
     }
 
-    // Send to n8n webhook
     try {
+      // If video is uploaded, send to video ingest endpoint first
+      if (formData.videoFile) {
+        const videoFormData = new FormData();
+        videoFormData.append('video', formData.videoFile);
+
+        await fetch('https://fern-exergonic-compositionally.ngrok-free.dev/video/ingest', {
+          method: 'POST',
+          body: videoFormData
+        });
+      }
+
+      // Send to n8n webhook
       const response = await fetch('https://rahulmohan.app.n8n.cloud/webhook-test/ac5d8037-976d-4384-8622-a08566629e3e', {
         method: 'POST',
         body: formDataToSend,
