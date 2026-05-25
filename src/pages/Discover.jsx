@@ -1142,8 +1142,7 @@ const Discover = () => {
                     Cancel
                   </Button>
                   <Button
-                    type="button"
-                    onClick={() => { setIsModalOpen(false); navigate('/create-trip'); }}
+                    type="submit"
                     className="flex-1 bg-primary-600 hover:bg-primary-700 text-white"
                   >
                     Create Trip
