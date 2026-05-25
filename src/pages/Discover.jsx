@@ -239,7 +239,6 @@ const Discover = () => {
     formDataToSend.append('email', user?.email || '');
     formDataToSend.append('tripType', formData.tripType);
     formDataToSend.append('destination', formData.destination);
-    formDataToSend.append('destination', formData.destination);
     formDataToSend.append('tripDescription', formData.tripDescription);
     formDataToSend.append('tripDate', formData.tripDate); // Add date to payload
     formDataToSend.append('intent', 'Create a new trip');
