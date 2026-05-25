@@ -97,7 +97,7 @@ const MOCK_CAROUSEL_ACTIVITIES = [
 ];
 
 const MOCK_POPULAR_DESTINATIONS = [
-    { name: 'Ibiza', image: 'https://images.unsplash.com/photo-1562920618-fa119ce0159b?q=80&w=800&auto=format&fit=crop' },
+    { name: 'Ibiza', image: 'https://images.unsplash.com/photo-1560242259-2470a6c6ec2d?q=80&w=800&auto=format&fit=crop' },
     { name: 'Tokyo', image: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=800&auto=format&fit=crop' },
     { name: 'Maldives', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop' },
     { name: 'Bali', image: 'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=800&auto=format&fit=crop' },
@@ -540,7 +540,7 @@ const CreateTrip = () => {
                                             <div ref={carouselRef} className="flex overflow-x-auto gap-4 pb-4 snap-x hide-scrollbar relative" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                                                 {/* Intro Card */}
                                                 <div className="snap-start flex-shrink-0 w-48 h-[280px] rounded-2xl relative overflow-hidden group cursor-pointer shadow-sm">
-                                                    <img src="https://images.unsplash.com/photo-1562920618-fa119ce0159b?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Ibiza" />
+                                                    <img src="https://images.unsplash.com/photo-1560242259-2470a6c6ec2d?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Ibiza" />
                                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                                                     <div className="absolute bottom-4 left-4 text-white">
                                                         <div className="font-bold text-2xl mb-1">Ibiza</div>

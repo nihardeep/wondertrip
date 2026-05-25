@@ -6,7 +6,7 @@ const HUB_DATA = {
   ibiza: {
     name: 'Ibiza',
     country: 'Spain',
-    heroImage: 'https://images.unsplash.com/photo-1562920618-fa119ce0159b?q=80&w=1600',
+    heroImage: 'https://images.unsplash.com/photo-1560242259-2470a6c6ec2d?q=80&w=1600',
     tagline: 'The ultimate Mediterranean escape. Famous for historic old towns, quiet villages, yoga retreats, and pristine beaches.',
     categories: ['Boat Tours', 'Nightlife', 'Historic Walk', 'Beach Clubs', 'Yoga Retreats'],
     activities: [

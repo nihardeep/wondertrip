@@ -7,7 +7,7 @@ const MOCK_INSPIRATIONS = [
     id: 'ibiza',
     name: 'Ibiza',
     tagline: 'The ultimate party and relaxation island.',
-    image: 'https://images.unsplash.com/photo-1562920618-fa119ce0159b?q=80&w=1200',
+    image: 'https://images.unsplash.com/photo-1560242259-2470a6c6ec2d?q=80&w=1200',
     hotels: [
       { id: 'ib1', name: 'The Ibiza Bay Resort', image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=600', rating: 4.8, reviews: 124, price: '€350' },
       { id: 'ib2', name: 'Sol House Ibiza', image: 'https://images.unsplash.com/photo-1522792040997-7e7e60086c20?q=80&w=600', rating: 4.6, reviews: 89, price: '€280' },
